@@ -1,8 +1,8 @@
 /* Styles for SignUpPage.js */
 
-.login-form-card {
+.sign-form-card {
     padding: 35px 30px;
-    margin-top: 7rem;
+    margin-top: 5rem;
     width: 90%;
 }
 
@@ -12,19 +12,19 @@
     }
 }
 
-.login-form {
+.sign-form {
     display: grid;
     gap: 16px;
 }
 
-.login-form>input,
-.login-form>button {
+.sign-form>input,
+.sign-form>button {
     width: 100%;
     height: 55px;
     border-radius: 28px;
 }
 
-.login-form>input {
+.sign-form>input {
     outline: 0;
     border: 2px solid #285238;
     font-family: inherit;
@@ -33,12 +33,13 @@
     color: #11274c;
 }
 
-.login-form>input::placeholder {
+.sign-form>input::placeholder {
     color: #285238;
     font-weight: 500;
+    opacity: .75;
 }
 
-.login-form>button {
+.sign-form>button {
     cursor: pointer;
     width: 100%;
     height: 56px;
@@ -54,14 +55,14 @@
     transition: all ease .25s;
 }
 
-.login-form>p {
+.sign-form>p {
     color: #2a3444;
 }
 
-.login-form>p a {
+.sign-form>p a {
     color: #16C552;
 }
 
-.login-form>button:hover {
+.sign-form>button:hover {
     opacity: .9;
 }

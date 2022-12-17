@@ -5,10 +5,17 @@ import SignUpPage from './components/Register/SignUpPage';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
+
+  const token = false;
+
+  const Home = () => {
+    return <>WELCOME</>
+  }
+
   return (
     <Routes>
-      <Route path='/' element={ <SignUpPage /> } exact />
-      <Route path='/login' element={ <LoginPage /> } />
+      <Route path='/' element={ token ? <Home /> : <LoginPage /> } exact />
+      <Route path='/register' element={ !token ? <SignUpPage /> : null } />
     </Routes>
   );
 }

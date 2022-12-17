@@ -12,7 +12,7 @@ function SignUpPage() {
 
     return (
         <Container>
-            <CardContainer color="#fff" className="login-form-card">
+            <CardContainer color="#fff" className="sign-form-card">
                 <h2 className="mx-auto text-center mb-2"
                     style={ {
                         fontSize: "22px",
@@ -27,6 +27,10 @@ function SignUpPage() {
                 <form className="login-form" onSubmit={ submitHandler }>
                     <input
                         type="text"
+                        placeholder="Full Name"
+                    />
+                    <input
+                        type="text"
                         placeholder="Username"
                     />
                     <input
@@ -39,7 +43,7 @@ function SignUpPage() {
                     />
                     <button type="submit">SUBMIT</button>
                     <p className="text-center p-0">
-                        Existing users, login <Link to='/login'>here</Link>
+                        Already have account? <Link to='/'>Login</Link>
                     </p>
                 </form>
             </CardContainer>

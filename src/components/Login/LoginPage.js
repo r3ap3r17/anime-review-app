@@ -29,7 +29,7 @@ function LoginPage() {
                     />
                     <button type="submit">SUBMIT</button>
                     <p className="text-center p-0">
-                        Dont have account? <Link to='/'>Register</Link>
+                        Dont have account? <Link to='/register'>Register</Link>
                     </p>
                 </form>
             </CardContainer>

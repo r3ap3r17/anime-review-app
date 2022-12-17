@@ -1,1 +1,0 @@
-Every component is stacked in i'ts own folder. 

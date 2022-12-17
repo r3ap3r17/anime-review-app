@@ -36,6 +36,7 @@
 .login-form>input::placeholder {
     color: #285238;
     font-weight: 500;
+    opacity: .75;
 }
 
 .login-form>button {
@@ -51,6 +52,10 @@
     font-weight: 600;
     letter-spacing: 2px;
     transition: all ease .35s;
+}
+
+.login-form>p a {
+    color: #16C552;
 }
 
 .login-form>button:hover {
