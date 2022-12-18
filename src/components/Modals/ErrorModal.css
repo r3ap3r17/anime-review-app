@@ -3,10 +3,16 @@
 }
 
 .error-modal {
-    width: 500px;
-    background-color: #fff;
+    width: 90%;
+    background-color: #fff !important;
     color: #2a3444;
     z-index: 101;
+}
+
+@media (width >=500px) {
+    .error-modal {
+        width: 500px;
+    }
 }
 
 .error-modal-header {
