@@ -9,7 +9,7 @@
     z-index: 101;
 }
 
-@media (width >=500px) {
+@media (width >=768px) {
     .error-modal {
         width: 500px;
     }
