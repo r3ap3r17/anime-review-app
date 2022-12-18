@@ -6,6 +6,7 @@
     width: 500px;
     background-color: #fff;
     color: #2a3444;
+    z-index: 101;
 }
 
 .error-modal-header {

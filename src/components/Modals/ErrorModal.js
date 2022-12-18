@@ -2,9 +2,9 @@ import ModalWrapper from "./ModalWrapper";
 import "./ErrorModal.css";
 import CardContainer from "../UI/CardContainer";
 
-function ErrorModal(activeModal) {
+function ErrorModal(props) {
     return (
-        <ModalWrapper>
+        <ModalWrapper onClick={ props.modalHandler }>
             <CardContainer className="error-modal">
                 <div className="error-modal-header">
                     <p>
@@ -17,7 +17,7 @@ function ErrorModal(activeModal) {
                     </p>
                 </div>
                 <div className="error-modal-footer text-end">
-                    <button className="">Okay</button>
+                    <button type="button" onClick={ props.modalHandler }>Okay</button>
                 </div>
             </CardContainer>
         </ModalWrapper>

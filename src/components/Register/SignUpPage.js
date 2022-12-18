@@ -11,6 +11,7 @@ function SignUpPage() {
     const [username, setUsername] = useState('');
     const [pass, setPass] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
+    const [modal, setModal] = useState(false);
 
     const nameInputHandler = (event) => {
         setName(event.target.value);
@@ -25,6 +26,10 @@ function SignUpPage() {
         setConfirmPass(event.target.value);
     }
 
+    const modalHandler = () => {
+        setModal(false);
+    }
+
 
     const submitHandler = (form) => {
         form.preventDefault();
@@ -32,7 +37,7 @@ function SignUpPage() {
         // const arr = [name, username, pass, confirmPass];
 
         if (name.trim().length === 0 || username.trim().length === 0 || pass.trim().length === 0 || confirmPass.trim().length === 0) {
-            alert("Sva polja moraju biti popunjena")
+            setModal(true);
         } else {
             setSign({
                 name: name,
@@ -46,7 +51,7 @@ function SignUpPage() {
 
     return (
         <Container>
-            <ErrorModal />
+            { modal ? <ErrorModal modalHandler={ modalHandler } /> : null }
             <CardContainer color="#fff" className="sign-form-card">
                 <h2 className="mx-auto text-center mb-2"
                     style={ {
