@@ -7,24 +7,24 @@
 }
 
 @media (width >=500px) {
-    .card-container {
+    .sign-form-card {
         width: 360px;
     }
 }
 
-.sign-form {
+#sign-form {
     display: grid;
     gap: 16px;
 }
 
-.sign-form>input,
-.sign-form>button {
+#sign-form>input,
+#sign-form>button {
     width: 100%;
     height: 55px;
     border-radius: 28px;
 }
 
-.sign-form>input {
+#sign-form>input {
     outline: 0;
     border: 2px solid #285238;
     font-family: inherit;
@@ -33,19 +33,18 @@
     color: #11274c;
 }
 
-.sign-form>input::placeholder {
+#sign-form>input::placeholder {
     color: #285238;
     font-weight: 500;
     opacity: .75;
 }
 
-.sign-form>button {
+#sign-form>button {
     cursor: pointer;
     width: 100%;
     height: 56px;
     padding: 0 16px;
     background-color: #1E6E37;
-    border: 2px solid #1E6E37;
     color: #fff;
     border: 0;
     font-family: inherit;
@@ -55,14 +54,14 @@
     transition: all ease .25s;
 }
 
-.sign-form>p {
+#sign-form>p {
     color: #2a3444;
 }
 
-.sign-form>p a {
+#sign-form>p a {
     color: #16C552;
 }
 
-.sign-form>button:hover {
+#sign-form>button:hover {
     opacity: .9;
 }

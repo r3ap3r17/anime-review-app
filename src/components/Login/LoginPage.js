@@ -18,12 +18,14 @@ function LoginPage() {
                         fontSize: "22px",
                         color: "#2a3444"
                     } }>Login</h2>
-                <form className="login-form" onSubmit={ submitHandler }>
+                <form id="login-form" onSubmit={ submitHandler }>
                     <input
+                        name="username"
                         type="text"
                         placeholder="Username"
                     />
                     <input
+                        name="password"
                         type="password"
                         placeholder="Password"
                     />

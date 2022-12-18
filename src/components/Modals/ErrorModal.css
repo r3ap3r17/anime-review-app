@@ -1,0 +1,47 @@
+.error-modal p {
+    margin: 0;
+}
+
+.error-modal {
+    width: 500px;
+    background-color: #fff;
+    color: #2a3444;
+}
+
+.error-modal-header {
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: #16C552;
+    padding: 1rem 2rem;
+}
+
+.error-modal-body {
+    font-size: 1.75rem;
+    padding: 2rem 2rem;
+}
+
+.error-modal-footer {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.error-modal-footer>button {
+    cursor: pointer;
+    width: 100px;
+    height: 45px;
+    padding: 8px;
+    background-color: #16C552;
+    border: 2px solid #16C552;
+    color: #fff;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 22px;
+    transition: all ease .25s;
+}
+
+.error-modal-footer>button:hover {
+    opacity: .8;
+}
