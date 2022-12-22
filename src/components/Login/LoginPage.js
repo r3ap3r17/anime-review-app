@@ -53,6 +53,10 @@ function LoginPage(props) {
                     </p>
                 </form>
             </CardContainer>
+            <div className="text-center text-light mt-3">
+                <p className="m-0">Username: User</p>
+                <p className="m-0">Password: 12345</p>
+            </div>
         </Container >
     );
 }

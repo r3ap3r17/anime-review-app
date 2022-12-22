@@ -1,0 +1,71 @@
+/* NAVBAR MENU */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #138A36;
+}
+
+.nav-group {
+    font-size: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-group .nav-title {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.nav-group ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-group ul .nav-item a {
+    display: block;
+    transition: all .25s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-group .nav-item .active {
+    border-bottom-color: #138A36;
+}
+
+/* RESPONSIVE NAVBAR DROPDOWN MENU */
+.nav-responsive {
+    position: absolute;
+    top: 72px;
+    left: 0;
+}
+
+.nav-responsive ul {
+    background-color: #F4F4ED;
+    overflow: hidden;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    transition: all .35s ease;
+}
+
+.nav-responsive ul a {
+    display: inline;
+    color: #34403A;
+    padding-bottom: .25rem;
+}
+
+.nav-responsive ul li {
+    padding: 1rem 0;
+}
+
+.nav-responsive.active ul {
+    width: 10rem;
+}

@@ -1,10 +1,8 @@
-import "./HomePage.css";
+import NavBar from "../Navbar/NavBar";
 
 function HomePage({ handleToken }) {
     return (
-        <button type="button" id="logout-btn" onClick={ handleToken } >
-            Log Out
-        </button>
+        <NavBar handleToken={ handleToken } />
     );
 }
 
