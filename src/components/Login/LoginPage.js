@@ -1,44 +1,33 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ErrorModal from "../Modals/ErrorModal";
 import CardContainer from "../UI/CardContainer";
 import "./LoginPage.css";
 
-function LoginPage() {
-    const [login, setLogin] = useState({});
-    const [username, setUsername] = useState('');
-    const [pass, setPass] = useState('');
+function LoginPage(props) {
+    const usernameInput = useRef();
+    const passwordInput = useRef();
     const [modal, setModal] = useState(false);
 
-    const usernameInputHandler = (event) => {
-        setUsername(event.target.value);
-    }
-    const passInputHandler = (event) => {
-        setPass(event.target.value);
-    }
-
     const modalHandler = () => {
-        setModal(false);
+        setModal(!modal);
     }
 
     const submitHandler = (form) => {
         form.preventDefault();
 
-        if (username.trim().length === 0 || pass.trim().length === 0) {
-            setModal(true);
-        } else {
-            setLogin({
-                username: username,
-                password: pass
-            });
-            console.log(login);
-        }
+        let username = usernameInput.current.value;
+        let pass = passwordInput.current.value;
+
+        if (!props.handleLogin(username, pass)) modalHandler()
     }
+
+    const errorText = "Username or Password incorrect !"
 
     return (
         <Container>
-            { modal ? <ErrorModal modalHandler={ modalHandler } /> : null }
+            { modal ? <ErrorModal modalHandler={ modalHandler } text={ errorText } /> : null }
             <CardContainer color="#fff" className="login-form-card">
                 <h2 className="mx-auto text-center mb-4"
                     style={ {
@@ -50,13 +39,13 @@ function LoginPage() {
                         name="username"
                         type="text"
                         placeholder="Username"
-                        onChange={ usernameInputHandler }
+                        ref={ usernameInput }
                     />
                     <input
                         name="password"
                         type="password"
                         placeholder="Password"
-                        onChange={ passInputHandler }
+                        ref={ passwordInput }
                     />
                     <button type="submit">SUBMIT</button>
                     <p className="text-center p-0">
@@ -64,7 +53,7 @@ function LoginPage() {
                     </p>
                 </form>
             </CardContainer>
-        </Container>
+        </Container >
     );
 }
 

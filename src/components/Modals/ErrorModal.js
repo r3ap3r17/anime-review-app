@@ -13,7 +13,7 @@ function ErrorModal(props) {
                 </div>
                 <div className="error-modal-body">
                     <p>
-                        Please fill all fields !
+                        { props.text }
                     </p>
                 </div>
                 <div className="error-modal-footer text-end">

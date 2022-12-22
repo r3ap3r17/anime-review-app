@@ -2,31 +2,35 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import LoginPage from "../Login/LoginPage";
 import SignUpPage from "../Register/SignUpPage";
+import HomePage from "./HomePage";
 
 function LandingPage() {
+    const username = 'User';
+    const password = '12345';
+    const [token, setToken] = useState(false);
 
-    const [inputBlank, setInputBlank] = useState(false);
-
-    // Data validation functions
-    const checkIfBlank = (sign) => {
-        for (let key of Object.keys(sign)) {
-            if (sign[key].trim().length === 0) {
-                setInputBlank(false)
-            } else { setInputBlank(true) }
-        }
-        return inputBlank;
+    const handleToken = () => {
+        setToken(false);
     }
 
-    const token = false;
+    const validateUser = (usernameInput, passwordInput) => {
+        if (usernameInput === username && passwordInput === password) {
+            setToken(true)
+        } else (
+            handleToken()
+        )
 
-    const Home = () => {
-        return <>WELCOME</>
+        return token;
     }
 
     return (
         <Routes>
-            <Route path='/' element={ token ? <Home /> : <LoginPage checkInputs={ checkIfBlank } /> } exact />
-            <Route path='/register' element={ !token ? <SignUpPage checkInputs={ checkIfBlank } /> : null } />
+            <Route path='/' element={
+                token ?
+                    <HomePage handleToken={ handleToken } />
+                    :
+                    <LoginPage handleLogin={ validateUser } /> } exact />
+            <Route path='/register' element={ !token ? <SignUpPage /> : null } />
         </Routes>
     );
 }
