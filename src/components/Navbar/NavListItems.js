@@ -28,14 +28,14 @@ function NavListItems({ activeHandler }) {
                     className={ activeLink === 'faq' ? 'active' : null }
                     href="#faq">FAQs</a>
             </li>
-            <li className="nav-item mx-3">
+            {/* <li className="nav-item mx-3">
                 <a onClick={ () => {
                     setActiveLink('contact');
                     activeHandler();
                 } }
                     className={ activeLink === 'contact' ? 'active' : null }
                     href="#contact">Contact us</a>
-            </li>
+            </li> */}
         </ul>
     );
 }
