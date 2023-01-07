@@ -5,8 +5,10 @@ import SignUpPage from "../Register/SignUpPage";
 import HomePage from "./HomePage";
 
 function LandingPage() {
-    const username = 'User';
-    const password = '12345';
+    const user = {
+        username: 'standardUser',
+        password: '12345'
+    }
     const [token, setToken] = useState(false);
 
     const handleToken = () => {
@@ -14,7 +16,7 @@ function LandingPage() {
     }
 
     const validateUser = (usernameInput, passwordInput) => {
-        if (usernameInput === username && passwordInput === password) {
+        if (usernameInput === user.username && passwordInput === user.password) {
             setToken(true)
         } else (
             handleToken()
@@ -29,7 +31,7 @@ function LandingPage() {
                 token ?
                     <HomePage handleToken={ handleToken } />
                     :
-                    <LoginPage handleLogin={ validateUser } /> } exact />
+                    <LoginPage handleLogin={ validateUser } user={ user } /> } exact />
             <Route path='/register' element={ !token ? <SignUpPage /> : null } />
         </Routes>
     );

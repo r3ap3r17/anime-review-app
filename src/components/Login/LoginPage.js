@@ -54,8 +54,8 @@ function LoginPage(props) {
                 </form>
             </CardContainer>
             <div className="text-center text-light mt-3">
-                <p className="m-0">Username: User</p>
-                <p className="m-0">Password: 12345</p>
+                <p className="m-0">Username: { props.user.username }</p>
+                <p className="m-0">Password: { props.user.password }</p>
             </div>
         </Container >
     );

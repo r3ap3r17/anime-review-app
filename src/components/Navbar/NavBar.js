@@ -4,6 +4,7 @@ import NavButton from "./NavButton";
 import NavListItems from "./NavListItems";
 import ButtonLogOut from "./ButtonLogOut";
 import "./NavBar.css"
+import CloseButton from "../UI/CloseButton";
 
 
 function NavBar({ handleToken }) {
@@ -32,6 +33,11 @@ function NavBar({ handleToken }) {
                 : <NavListItems /> }
             <div className={ (active & button) ? "nav-responsive active" : "nav-responsive" }>
                 <NavListItems activeHandler={ activeHandler } />
+                <CloseButton
+                    className="nav-close-btn"
+                    id="nav-close-btn"
+                    activeHandler={ activeHandler }
+                />
             </div>
             <ButtonLogOut handleToken={ handleToken } />
         </Container>

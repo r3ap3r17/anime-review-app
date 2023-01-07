@@ -16,14 +16,14 @@
 }
 
 .error-modal-header {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
     background-color: #16C552;
     padding: 1rem 2rem;
 }
 
 .error-modal-body {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     padding: 2rem 2rem;
 }
 
