@@ -31,6 +31,7 @@
     font-size: 16px;
     padding: 0 24px;
     color: #11274c;
+    margin-bottom: .5rem;
 }
 
 #login-form>input::placeholder {

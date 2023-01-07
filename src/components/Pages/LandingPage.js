@@ -6,7 +6,7 @@ import HomePage from "./HomePage";
 
 function LandingPage() {
     const user = {
-        username: 'standardUser',
+        username: 'StandardUser',
         password: '12345'
     }
     const [token, setToken] = useState(false);

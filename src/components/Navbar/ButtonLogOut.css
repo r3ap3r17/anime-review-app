@@ -2,13 +2,13 @@
     cursor: pointer;
     width: 100px;
     height: 45px;
-    padding: 8px;
+    padding: 6px;
     background-color: #138A36;
     border: 2px solid #138A36;
     color: #fff;
     border: 0;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: inherit;
     font-weight: 600;
     letter-spacing: 2px;
     border-radius: 22px;

@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 
-.hamburger {
+.close-btn {
     padding: 0;
     display: inline-block;
     cursor: pointer;
@@ -22,37 +22,33 @@
     overflow: visible;
 }
 
-.hamburger:hover {
+.close-btn:hover {
     opacity: 0.7;
 }
 
-.hamburger.is-active:hover {
-    opacity: 0.7;
-}
-
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
+.close-span,
+.close-span::before,
+.close-span::after {
     background-color: #138A36;
 }
 
-.hamburger-box {
-    width: 35px;
+.close-btn-box {
+    width: 25px;
     height: 24px;
     display: inline-block;
     position: relative;
 }
 
-.hamburger-inner {
+.close-span {
     display: block;
     top: 50%;
     margin-top: -1px;
 }
 
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-    width: 35px;
+.close-span,
+.close-span::before,
+.close-span::after {
+    width: 25px;
     height: 4px;
     background-color: #138A36;
     border-radius: 4px;
@@ -62,46 +58,33 @@
     transition-timing-function: ease;
 }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
+.close-span::before,
+.close-span::after {
     content: "";
     display: block;
 }
 
-.hamburger-inner::before {
+.close-span::before {
     top: -10px;
 }
 
-.hamburger-inner::after {
+.close-span::after {
     bottom: -10px;
 }
 
-.hamburger--spin .hamburger-inner {
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--spin .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-}
-
-.hamburger--spin .hamburger-inner::after {
-    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--spin.is-active .hamburger-inner {
+.close-span {
     transform: rotate(225deg);
     transition-delay: 0.12s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.hamburger--spin.is-active .hamburger-inner::before {
+.close-span::before {
     top: 0;
     opacity: 0;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
-.hamburger--spin.is-active .hamburger-inner::after {
+.close-span::after {
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
