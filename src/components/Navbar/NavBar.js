@@ -7,7 +7,7 @@ import "./NavBar.css"
 import CloseButton from "../UI/CloseButton";
 
 
-function NavBar({ handleToken }) {
+function NavBar({ handleLogout }) {
     const [button, setButton] = useState(false);
     const [active, setActive] = useState(false);
     const activeHandler = () => setActive(!active);
@@ -39,7 +39,7 @@ function NavBar({ handleToken }) {
                     activeHandler={ activeHandler }
                 />
             </div>
-            <ButtonLogOut handleToken={ handleToken } />
+            <ButtonLogOut handleLogout={ handleLogout } />
         </Container>
     );
 }

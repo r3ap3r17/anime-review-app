@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import LoginPage from "../Login/LoginPage";
 import SignUpPage from "../Register/SignUpPage";
@@ -9,17 +9,27 @@ function LandingPage() {
         username: 'StandardUser',
         password: '12345'
     }
-    const [token, setToken] = useState(false);
 
-    const handleToken = () => {
+    // When token is true app returns HomePage, otherwise returns landingPage
+    const [token, setToken] = useState(false);
+    // Used to logout from app
+    const handleLogout = () => {
+        localStorage.setItem('token', 'LOGGED_OUT')
         setToken(false);
     }
 
+    useEffect(() => {
+        if (localStorage.getItem('token') === 'LOGGED_IN') {
+            setToken(true);
+        }
+    }, []);
+
     const validateUser = (usernameInput, passwordInput) => {
         if (usernameInput === user.username && passwordInput === user.password) {
+            localStorage.setItem('token', 'LOGGED_IN');
             setToken(true)
         } else (
-            handleToken()
+            handleLogout()
         )
 
         return token;
@@ -29,9 +39,9 @@ function LandingPage() {
         <Routes>
             <Route path='/' element={
                 token ?
-                    <HomePage handleToken={ handleToken } />
+                    <HomePage handleLogout={ handleLogout } />
                     :
-                    <LoginPage handleLogin={ validateUser } user={ user } /> } exact />
+                    <LoginPage validateUser={ validateUser } user={ user } /> } exact />
             <Route path='/register' element={ !token ? <SignUpPage /> : null } />
         </Routes>
     );

@@ -20,7 +20,7 @@ function LoginPage(props) {
         let username = usernameInput.current.value;
         let pass = passwordInput.current.value;
 
-        if (!props.handleLogin(username, pass)) modalHandler()
+        if (!props.validateUser(username, pass)) modalHandler()
     }
 
     const errorText = "Username or Password incorrect !"

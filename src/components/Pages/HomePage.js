@@ -1,8 +1,8 @@
 import NavBar from "../Navbar/NavBar";
 
-function HomePage({ handleToken }) {
+function HomePage({ handleLogout }) {
     return (
-        <NavBar handleToken={ handleToken } />
+        <NavBar handleLogout={ handleLogout } />
     );
 }
 

@@ -12,6 +12,8 @@
     font-weight: 600;
     letter-spacing: 2px;
     border-radius: 22px;
+    box-shadow: 20px 20px 60px #2c3631,
+        -20px -20px 60px #3c4a43;
     transition: all ease .25s;
 }
 

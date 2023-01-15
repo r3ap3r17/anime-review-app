@@ -1,8 +1,8 @@
 import "./ButtonLogOut.css";
 
-function ButtonLogOut({ handleToken }) {
+function ButtonLogOut({ handleLogout }) {
     return (
-        <button type="button" id="logout-btn" onClick={ handleToken } >
+        <button type="button" id="logout-btn" onClick={ handleLogout } >
             Log Out
         </button>
     );
