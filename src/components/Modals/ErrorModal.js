@@ -13,7 +13,7 @@ function ErrorModal(props) {
                 </div>
                 <div className="error-modal-body">
                     <p>
-                        { props.text }
+                        { props.children }
                     </p>
                 </div>
                 <div className="error-modal-footer text-end">

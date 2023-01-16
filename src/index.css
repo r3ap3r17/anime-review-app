@@ -10,3 +10,8 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #34403A !important;
 }
+
+*::selection {
+  background-color: #138A36;
+  color: #ffff;
+}

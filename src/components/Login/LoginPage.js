@@ -23,11 +23,12 @@ function LoginPage(props) {
         if (!props.validateUser(username, pass)) modalHandler()
     }
 
-    const errorText = "Username or Password incorrect !"
-
     return (
         <Container>
-            { modal ? <ErrorModal modalHandler={ modalHandler } text={ errorText } /> : null }
+            { modal ?
+                <ErrorModal modalHandler={ modalHandler } >
+                    Username or Password incorrect !
+                </ErrorModal> : null }
             <CardContainer color="#fff" className="login-form-card">
                 <h2 className="mx-auto text-center mb-4"
                     style={ {
@@ -48,7 +49,7 @@ function LoginPage(props) {
                         ref={ passwordInput }
                     />
                     <button type="submit">SUBMIT</button>
-                    <p className="text-center p-0">
+                    <p className="text-center p-0 mb-0">
                         Dont have account? <Link to='/register'>Register</Link>
                     </p>
                 </form>

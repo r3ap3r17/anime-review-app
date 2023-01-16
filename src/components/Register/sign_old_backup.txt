@@ -1,0 +1,42 @@
+    const [sign, setSign] = useState({});
+    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
+    const [pass, setPass] = useState('');
+    const [confirmPass, setConfirmPass] = useState('');
+    const [modal, setModal] = useState(false);
+
+    const nameInputHandler = (event) => {
+        setName(event.target.value);
+    }
+    const usernameInputHandler = (event) => {
+        setUsername(event.target.value);
+    }
+    const passInputHandler = (event) => {
+        setPass(event.target.value);
+    }
+    const confirmPassInputHandler = (event) => {
+        setConfirmPass(event.target.value);
+    }
+
+    const modalHandler = () => {
+        setModal(false);
+    }
+
+
+    const submitHandler = (form) => {
+        form.preventDefault();
+
+        // const arr = [name, username, pass, confirmPass];
+
+        if (name.trim().length === 0 || username.trim().length === 0 || pass.trim().length === 0 || confirmPass.trim().length === 0) {
+            setModal(true);
+        } else {
+            setSign({
+                name: name,
+                username: username,
+                password: pass,
+                confirmPassword: confirmPass
+            });
+            console.log(sign);
+        }
+    }

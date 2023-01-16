@@ -2,7 +2,7 @@
 
 .sign-form-card {
     padding: 35px 30px;
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 90%;
 }
 
@@ -14,7 +14,6 @@
 
 #sign-form {
     display: grid;
-    gap: 16px;
 }
 
 #sign-form>input,
@@ -30,7 +29,6 @@
     font-family: inherit;
     font-size: 16px;
     padding: 0 24px;
-    margin-bottom: .5rem;
     color: #11274c;
 }
 
@@ -52,6 +50,7 @@
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 2px;
+    margin-bottom: 1rem;
     transition: all ease .25s;
 }
 
