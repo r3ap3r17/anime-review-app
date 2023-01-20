@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ErrorModal from "../Modals/ErrorModal";
-import CardContainer from "../UI/CardContainer";
+import CardContainer from "../UI/CardContainer/CardContainer";
 import "./LoginPage.css";
 
 function LoginPage(props) {
@@ -29,7 +29,7 @@ function LoginPage(props) {
                 <ErrorModal modalHandler={ modalHandler } >
                     Username or Password incorrect !
                 </ErrorModal> : null }
-            <CardContainer color="#fff" className="login-form-card">
+            <CardContainer color="#fff" className="login-form-card mx-auto">
                 <h2 className="mx-auto text-center mb-4"
                     style={ {
                         fontSize: "22px",

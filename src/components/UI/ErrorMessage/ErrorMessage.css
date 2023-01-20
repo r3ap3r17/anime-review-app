@@ -1,0 +1,12 @@
+.error {
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    font-size: 14px;
+    color: red !important;
+    cursor: default;
+    opacity: 0;
+}
+
+.invalid {
+    opacity: 1;
+}

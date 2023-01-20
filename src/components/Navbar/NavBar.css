@@ -8,6 +8,11 @@ a:hover {
     color: #138A36;
 }
 
+.nav-wrapper {
+    border-bottom: 1px solid rgba(19, 138, 54, .3);
+    padding-bottom: 1.5rem;
+}
+
 .nav-group {
     font-size: inherit;
     display: flex;

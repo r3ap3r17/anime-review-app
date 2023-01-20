@@ -1,9 +1,0 @@
-/* Styles for CardContainer.js */
-
-.card-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px !important;
-    background-color: inherit;
-    box-shadow: 0 100px 100px rgb(0, 0, 0 / 10%);
-}

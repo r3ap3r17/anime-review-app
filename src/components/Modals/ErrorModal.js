@@ -1,6 +1,6 @@
 import ModalWrapper from "./ModalWrapper";
 import "./ErrorModal.css";
-import CardContainer from "../UI/CardContainer";
+import CardContainer from "../UI/CardContainer/CardContainer";
 
 function ErrorModal(props) {
     return (

@@ -2,8 +2,8 @@ import { useReducer, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ErrorModal from "../Modals/ErrorModal";
-import CardContainer from "../UI/CardContainer";
-import ErrorMessage from "../UI/ErrorMessage";
+import CardContainer from "../UI/CardContainer/CardContainer";
+import ErrorMessage from "../UI/ErrorMessage/ErrorMessage";
 import "./SignUpPage.css";
 
 // First name must contain 2 strings each starting with Uppercase
@@ -113,7 +113,7 @@ function SignUpPage() {
                 <ErrorModal modalHandler={ modalHandler }>
                     Please provide valid data !
                 </ErrorModal> : null }
-            <CardContainer color="#fff" className="sign-form-card">
+            <CardContainer color="#fff" className="sign-form-card mx-auto">
                 <h2 className="mx-auto text-center mb-2"
                     style={ {
                         fontSize: "22px",
