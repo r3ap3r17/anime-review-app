@@ -1,5 +1,5 @@
-import Layout from "../Layout/Layout";
 import ContentWrapper from "../Sections/ContentWrapper/ContentWrapper";
+import HeaderSection from "../Sections/HeaderSection/HeaderSection";
 import MovieCard from "../UI/MovieCard/MovieCard";
 
 const movies = [
@@ -75,11 +75,12 @@ const movies = [
         image: "example.jpg",
         rating: 4.6
     }
-]
+];
 
 function HomePage({ handleLogout }) {
     return (
-        <Layout handleLogout={ handleLogout }>
+        <>
+            <HeaderSection handleLogout={ handleLogout } />
             <ContentWrapper style={ { marginTop: "9rem", marginBottom: "9rem" } }>
                 {
                     movies.map((movie) =>
@@ -93,7 +94,7 @@ function HomePage({ handleLogout }) {
                         ) } */}
 
             </ContentWrapper>
-        </Layout>
+        </>
     );
 }
 

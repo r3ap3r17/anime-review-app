@@ -9,9 +9,19 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #34403A !important;
+  letter-spacing: 1px;
 }
 
 *::selection {
   background-color: #138A36;
   color: #ffff;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }

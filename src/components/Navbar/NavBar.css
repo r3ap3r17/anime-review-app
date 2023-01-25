@@ -11,6 +11,7 @@ a:hover {
 .nav-wrapper {
     border-bottom: 1px solid rgba(19, 138, 54, .3);
     padding-bottom: 1.5rem;
+    z-index: 100;
 }
 
 .nav-group {
@@ -36,11 +37,12 @@ a:hover {
 .nav-group ul .nav-item a {
     display: block;
     transition: all .25s ease;
-    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .nav-group .nav-item .active {
-    border-bottom-color: #138A36;
+    color: #138A36;
 }
 
 /* RESPONSIVE NAVBAR DROPDOWN MENU */

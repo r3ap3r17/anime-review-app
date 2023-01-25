@@ -3,7 +3,7 @@ import "./ButtonLogOut.css";
 function ButtonLogOut({ handleLogout }) {
     return (
         <button type="button" id="logout-btn" onClick={ handleLogout } >
-            Log Out
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
         </button>
     );
 }
