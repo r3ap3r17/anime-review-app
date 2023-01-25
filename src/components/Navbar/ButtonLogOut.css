@@ -5,12 +5,10 @@
     font-family: inherit;
     font-size: 1.5rem;
     font-weight: 600;
-    background-color: transparent;
-    box-shadow: 20px 20px 60px #2c3631,
-        -20px -20px 60px #3c4a43;
+    background: transparent;
     transition: all ease .25s;
 }
 
 #logout-btn:hover {
-    color: #138A36;
+    color: var(--primary);
 }

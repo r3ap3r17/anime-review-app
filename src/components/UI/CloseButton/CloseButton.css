@@ -50,7 +50,7 @@
 .close-span::after {
     width: 25px;
     height: 4px;
-    background-color: #138A36;
+    background-color: var(--primary);
     border-radius: 4px;
     position: absolute;
     transition-property: transform;

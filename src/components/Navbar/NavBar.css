@@ -5,11 +5,10 @@ a {
 }
 
 a:hover {
-    color: #138A36;
+    color: var(--primary);
 }
 
 .nav-wrapper {
-    border-bottom: 1px solid rgba(19, 138, 54, .3);
     padding-bottom: 1.5rem;
     z-index: 100;
 }
@@ -42,7 +41,7 @@ a:hover {
 }
 
 .nav-group .nav-item .active {
-    color: #138A36;
+    color: var(--primary);
 }
 
 /* RESPONSIVE NAVBAR DROPDOWN MENU */
@@ -73,7 +72,7 @@ a:hover {
 
 .nav-responsive ul a {
     display: inline-block;
-    color: #34403A;
+    color: inherit;
     padding-bottom: .25rem;
 }
 

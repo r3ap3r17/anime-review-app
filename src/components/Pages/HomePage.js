@@ -4,6 +4,12 @@ import MovieCard from "../UI/MovieCard/MovieCard";
 
 const movies = [
     {
+        title: "Hellsing Ultimate",
+        genre: "Horror, Action",
+        image: "https://images3.alphacoders.com/112/1129270.png",
+        rating: 4.4
+    },
+    {
         title: "Lord of The Rings",
         genre: "Fantasy, Adventure, Sci-Fi",
         image: "example.jpg",
@@ -80,8 +86,8 @@ const movies = [
 function HomePage({ handleLogout }) {
     return (
         <>
-            <HeaderSection handleLogout={ handleLogout } />
-            <ContentWrapper style={ { marginTop: "9rem", marginBottom: "9rem" } }>
+            <HeaderSection animes={ movies } handleLogout={ handleLogout } />
+            <ContentWrapper style={ { marginBottom: "9rem" } }>
                 {
                     movies.map((movie) =>
                         <MovieCard movie={ movie } key={ movie.title } />

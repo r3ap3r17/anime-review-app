@@ -3,7 +3,7 @@ import './ContentWrapper.css';
 
 function ContentWrapper(props) {
     return (
-        <Container fluid>
+        <Container className='mt-5'>
             <div className="wrapper" style={ props.style }>
                 { props.children }
             </div>

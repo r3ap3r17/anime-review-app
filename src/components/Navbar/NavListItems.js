@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function NavListItems({ activeHandler }) {
-    const [activeLink, setActiveLink] = useState('movies');
+    const [activeLink, setActiveLink] = useState('animes');
     return (
         <ul className="mx-auto">
             <li className="nav-item mx-3">
@@ -9,8 +9,8 @@ function NavListItems({ activeHandler }) {
                     setActiveLink(e.target.text);
                     activeHandler();
                 } }
-                    className={ activeLink === 'movies' ? 'active' : null }
-                    href="#home">movies</a>
+                    className={ activeLink === 'animes' ? 'active' : null }
+                    href="#home">animes</a>
             </li>
             <li className="nav-item mx-3">
                 <a onClick={ (e) => {
