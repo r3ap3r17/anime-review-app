@@ -1,8 +1,8 @@
 import ContentWrapper from "../Sections/ContentWrapper/ContentWrapper";
 import HeaderSection from "../Sections/HeaderSection/HeaderSection";
-import MovieCard from "../UI/MovieCard/MovieCard";
+import AnimeCard from "../UI/AnimeCard/AnimeCard";
 
-const movies = [
+const ANIMES = [
     {
         title: "Hellsing Ultimate",
         genre: "Horror, Action",
@@ -86,11 +86,11 @@ const movies = [
 function HomePage({ handleLogout }) {
     return (
         <>
-            <HeaderSection animes={ movies } handleLogout={ handleLogout } />
+            <HeaderSection animes={ ANIMES } handleLogout={ handleLogout } />
             <ContentWrapper style={ { marginBottom: "9rem" } }>
                 {
-                    movies.map((movie) =>
-                        <MovieCard movie={ movie } key={ movie.title } />
+                    ANIMES.map((anime) =>
+                        <AnimeCard anime={ anime } key={ anime.title } />
                     ) }
 
                 {/* FILTER MOVIES BY GENRE EXAMPLE

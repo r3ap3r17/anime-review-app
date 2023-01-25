@@ -12,7 +12,7 @@ function HeaderSection({ handleLogout, animes }) {
             <BackgroundImage imageLink={ animes[0].image } />
             <NavBar handleLogout={ handleLogout } />
             <header style={ { height: "85vh" } } className="d-flex align-items-center">
-                <Container className="header-content text-center text-sm-start">
+                <Container className="header-content mb-5 text-center text-sm-start">
                     <h1 className="header-title">
                         { animes[0].title }
                     </h1>
