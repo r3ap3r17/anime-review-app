@@ -10,5 +10,5 @@
 }
 
 #logout-btn:hover {
-    color: var(--primary);
+    opacity: .7;
 }

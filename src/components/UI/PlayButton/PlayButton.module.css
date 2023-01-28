@@ -7,4 +7,9 @@
     outline: 0;
     border: none;
     border-radius: 30px;
+    transition: .35s ease;
+}
+
+.button:hover {
+    opacity: .7;
 }

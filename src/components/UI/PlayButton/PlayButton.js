@@ -1,12 +1,13 @@
 import styles from "./PlayButton.module.css";
 
-function PlayButton({ linkTo }) {
+function PlayButton({ linkTo, id, className }) {
 
 
     return (
         <button
+            id={ id }
             type="button"
-            className={ styles.button }
+            className={ `${className} ${styles.button}` }
             onClick={ () => {
                 window.open(linkTo, '_blank')
             } }>

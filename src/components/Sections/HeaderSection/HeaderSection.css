@@ -11,3 +11,16 @@
 .header-wrapper {
     height: 100vh;
 }
+
+.header-title,
+.header-description,
+.button-play {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+.fade-move {
+    opacity: 1;
+    transform: translateX(0px);
+}

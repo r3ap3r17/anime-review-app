@@ -1,11 +1,12 @@
 /* NAVBAR MENU */
 a {
-    color: #fff;
+    color: #fff !important;
+    opacity: .5;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--primary);
+    opacity: 1;
 }
 
 .nav-wrapper {
@@ -41,10 +42,11 @@ a:hover {
 }
 
 .nav-group .nav-item .active {
-    color: var(--primary);
+    opacity: 1;
 }
 
 /* RESPONSIVE NAVBAR DROPDOWN MENU */
+
 .nav-responsive {
     position: absolute;
     top: 0;
@@ -72,7 +74,7 @@ a:hover {
 
 .nav-responsive ul a {
     display: inline-block;
-    color: inherit;
+    color: #111 !important;
     padding-bottom: .25rem;
 }
 
