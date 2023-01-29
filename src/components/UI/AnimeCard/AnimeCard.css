@@ -51,13 +51,13 @@
 }
 
 .movie-card-body .movie-title {
-    color: #138A36;
+    color: #111;
     font-size: 1.25rem;
     font-weight: 600;
 }
 
 .movie-card-body .movie-genre {
-    color: #138A36;
+    color: #111;
     font-size: .75rem;
     font-weight: 400;
 }

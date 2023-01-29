@@ -9,10 +9,10 @@ function HeaderSection({ handleLogout, animes }) {
     const [fadeMove, setFadeMove] = useState(false);
 
     const fadeAnimationHandler = () => {
-        if (window.window.scrollY <= 300) {
+        if (window.window.scrollY <= 250) {
             setFadeMove(true);
         }
-        if (window.scrollY > 300) {
+        if (window.scrollY > 250) {
             setFadeMove(false);
         }
     }
