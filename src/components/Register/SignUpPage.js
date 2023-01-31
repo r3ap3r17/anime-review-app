@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ErrorModal from "../Modals/ErrorModal";
 import CardContainer from "../UI/CardContainer/CardContainer";
 import ErrorMessage from "../UI/ErrorMessage/ErrorMessage";
-import "./SignUpPage.css";
+import styles from "./SignUpPage.module.css";
 
 // First name must contain 2 strings each starting with Uppercase
 const isValidFullName = (name) => {
@@ -113,19 +113,10 @@ function SignUpPage() {
                 <ErrorModal modalHandler={ modalHandler }>
                     Please provide valid data !
                 </ErrorModal> : null }
-            <CardContainer color="#fff" className="sign-form-card mx-auto">
-                <h2 className="mx-auto text-center mb-2"
-                    style={ {
-                        fontSize: "22px",
-                        color: "#2a3444"
-                    } }>Create Account</h2>
-                <h2 className="mx-auto text-center mb-4"
-                    style={ {
-                        fontSize: "14px",
-                        color: "#2a3444",
-                        opacity: ".5"
-                    } }>Enter your credentials</h2>
-                <form id="sign-form" onSubmit={ submitHandler }>
+            <CardContainer color="#fff" className={ `${styles['sign-form-card']} mx-auto` }>
+                <h2 className={ `${styles['form-title']} mx-auto text-center mb-2` }>Create Account</h2>
+                <h2 className={ `${styles['form-description']} mx-auto text-center mb-4` }>Enter your credentials</h2>
+                <form id="sign-form" className={ styles['sign-form'] } onSubmit={ submitHandler }>
                     <input
                         name="full-name"
                         type="text"
@@ -170,7 +161,7 @@ function SignUpPage() {
 
                     <button type="submit">SUBMIT</button>
                     <p className="text-center p-0 mb-0">
-                        Already have account? <Link to='/'>Login</Link>
+                        Already have account? <Link className={ styles['form-link'] } to='/'>Login</Link>
                     </p>
                 </form>
             </CardContainer>

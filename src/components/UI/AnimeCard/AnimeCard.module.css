@@ -23,12 +23,15 @@
     object-fit: cover;
 }
 
-.movie-card:hover {
+/* .movie-card:hover {
     transform: translateZ(5px) rotateX(-14deg) rotateY(-10deg);
-}
+} */
 
 .movie-card-body {
+    width: 100%;
     padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .movie-card-body p:after {

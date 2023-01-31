@@ -3,8 +3,8 @@ import { Container } from "react-bootstrap";
 import NavButton from "./NavButton";
 import NavListItems from "./NavListItems";
 import ButtonLogOut from "./ButtonLogOut";
-import "./NavBar.css"
-import CloseButton from "../UI/CloseButton/CloseButton";
+import styles from "./NavBar.module.css"
+import NavResponsive from "./NavResponsive";
 
 
 function NavBar({ handleLogout }) {
@@ -27,19 +27,15 @@ function NavBar({ handleLogout }) {
     window.addEventListener('resize', showButton);
 
     return (
-        <div className="nav-wrapper">
-            <Container fluid="md" className="nav-group py-0 pt-4 px-4 px-md-0">
+        <div className={ styles['nav-wrapper'] }>
+            <Container fluid="md" className={ `${styles['nav-group']} py-0 pt-4 px-4 px-md-0` }>
                 { button
                     ? <NavButton active={ active } activeHandler={ activeHandler } />
                     : <NavListItems /> }
-                <div className={ (active & button) ? "nav-responsive active" : "nav-responsive" }>
-                    <NavListItems activeHandler={ activeHandler } />
-                    <CloseButton
-                        className="nav-close-btn"
-                        id="nav-close-btn"
-                        activeHandler={ activeHandler }
-                    />
-                </div>
+                <NavResponsive
+                    active={ active }
+                    button={ button }
+                    activeHandler={ activeHandler } />
                 <ButtonLogOut handleLogout={ handleLogout } />
             </Container>
         </div>

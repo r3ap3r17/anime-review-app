@@ -1,8 +1,8 @@
-import "./ModalWrapper.css";
+import styles from "./ModalWrapper.module.css";
 
 function ModalWrapper(props) {
     return (
-        <div className="modal-wrapper" onClick={ props.onClick }>
+        <div className={ styles['modal-wrapper'] } onClick={ props.onClick }>
             { props.children }
         </div>
     );

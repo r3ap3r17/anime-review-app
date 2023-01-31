@@ -5,7 +5,7 @@
 .error-modal {
     width: 90%;
     background-color: #fff !important;
-    color: #2a3444;
+    color: #0c0c0F;
     z-index: 101;
 }
 
@@ -18,7 +18,7 @@
 .error-modal-header {
     font-size: 2rem;
     color: #fff;
-    background-color: #16C552;
+    background-color: var(--primary);
     padding: 1rem 2rem;
 }
 
@@ -37,8 +37,8 @@
     width: 100px;
     height: 45px;
     padding: 8px;
-    background-color: #16C552;
-    border: 2px solid #16C552;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
     color: #fff;
     border: 0;
     font-family: inherit;

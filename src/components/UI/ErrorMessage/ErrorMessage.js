@@ -1,8 +1,8 @@
-import './ErrorMessage.css';
+import styles from './ErrorMessage.module.css';
 
 function ErrorMessage(props) {
     return (
-        <p className={ props.className + " error" }>
+        <p className={ `${styles[props.className]} ${styles.error}` }>
             <i class="fa-solid fa-triangle-exclamation me-2"></i>
             { props.children }
         </p>

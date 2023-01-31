@@ -12,35 +12,40 @@
     }
 }
 
-#login-form {
+.login-form {
     display: grid;
     gap: 16px;
 }
 
-#login-form>input,
-#login-form>button {
+.form-title {
+    font-size: 22px;
+    color: var(--secondary);
+}
+
+.login-form>input,
+.login-form>button {
     width: 100%;
     height: 55px;
     border-radius: 28px;
 }
 
-#login-form>input {
+.login-form>input {
     outline: 0;
     border: 2px solid #285238;
     font-family: inherit;
     font-size: 16px;
     padding: 0 24px;
-    color: #11274c;
+    color: var(--secondary);
     margin-bottom: .5rem;
 }
 
-#login-form>input::placeholder {
+.login-form>input::placeholder {
     color: #285238;
     font-weight: 500;
     opacity: .75;
 }
 
-#login-form>button {
+.login-form>.loginBtn {
     cursor: pointer;
     width: 100%;
     height: 56px;
@@ -55,10 +60,17 @@
     transition: all ease .35s;
 }
 
-#login-form>p a {
-    color: #16C552;
+.login-form .loginBtn:hover {
+    opacity: .9;
 }
 
-#login-form>button:hover {
-    opacity: .9;
+.login-form p {
+    color: var(--secondary);
+}
+
+.form-link {
+    letter-spacing: normal;
+    color: var(--primary) !important;
+    font-weight: 400;
+    opacity: 1;
 }

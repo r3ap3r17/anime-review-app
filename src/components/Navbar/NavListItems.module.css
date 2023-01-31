@@ -1,0 +1,10 @@
+.nav-item a {
+    display: block;
+    transition: all .25s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-item .active {
+    opacity: 1;
+}

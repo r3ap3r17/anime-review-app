@@ -1,12 +1,12 @@
-import './CloseButton.css';
+import styles from './CloseButton.module.css';
 
 function CloseButton({ activeHandler, className }) {
     return (
         <button onClick={ activeHandler }
-            class={ className + " close-btn" }
+            class={ className + ` ${styles['close-btn']}` }
             type="button" >
-            <span class="close-btn-box">
-                <span class="close-span"></span>
+            <span class={ styles['close-btn-box'] }>
+                <span class={ styles['close-span'] }></span>
             </span>
         </button >
 

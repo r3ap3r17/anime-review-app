@@ -9,6 +9,7 @@
 
 :root {
   --primary: #FF4B3D;
+  --secondary: #0c0c0F;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   letter-spacing: 1px;
 }
 
-*::selection {
+/* *::selection {
   background-color: #fff;
   color: #111;
-}
+} */

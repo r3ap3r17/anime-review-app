@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ErrorModal from "../Modals/ErrorModal";
 import CardContainer from "../UI/CardContainer/CardContainer";
-import "./LoginPage.css";
+import styles from "./LoginPage.module.css";
 
 function LoginPage(props) {
     const usernameInput = useRef();
@@ -29,13 +29,9 @@ function LoginPage(props) {
                 <ErrorModal modalHandler={ modalHandler } >
                     Username or Password incorrect !
                 </ErrorModal> : null }
-            <CardContainer color="#fff" className="login-form-card mx-auto">
-                <h2 className="mx-auto text-center mb-4"
-                    style={ {
-                        fontSize: "22px",
-                        color: "#2a3444"
-                    } }>Login</h2>
-                <form id="login-form" onSubmit={ submitHandler }>
+            <CardContainer color="#fff" className={ `${styles['login-form-card']} mx-auto` }>
+                <h2 className={ `${styles['form-title']} mx-auto text-center mb-4` }>Login</h2>
+                <form id="login-form" className={ styles['login-form'] } onSubmit={ submitHandler }>
                     <input
                         name="username"
                         type="text"
@@ -48,9 +44,9 @@ function LoginPage(props) {
                         placeholder="Password"
                         ref={ passwordInput }
                     />
-                    <button type="submit">SUBMIT</button>
+                    <button className={ styles.loginBtn } id="loginSubmitButton" type="submit">SUBMIT</button>
                     <p className="text-center p-0 mb-0">
-                        Dont have account? <Link to='/register'>Register</Link>
+                        Dont have account? <Link className={ styles['form-link'] } to='/register'>Register</Link>
                     </p>
                 </form>
             </CardContainer>

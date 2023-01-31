@@ -1,12 +1,16 @@
-import './NavButton.css';
+import styles from './NavButton.module.css';
 
 function NavButton({ active, activeHandler }) {
     return (
         <button onClick={ activeHandler }
-            class={ active ? "hamburger hamburger--spin is-active" : "hamburger hamburger--spin" }
+            class={ active
+                ?
+                `${styles['hamburger']} ${styles['hamburger--spin']} ${styles['is-active']}`
+                :
+                `${styles['hamburger']} ${styles['hamburger--spin']}` }
             type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
+            <span class={ styles['hamburger-box'] }>
+                <span class={ styles['hamburger-inner'] }></span>
             </span>
         </button>
 

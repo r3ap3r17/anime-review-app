@@ -1,10 +1,10 @@
 import { Container } from 'react-bootstrap';
-import './ContentWrapper.css';
+import styles from './ContentWrapper.module.css';
 
 function ContentWrapper(props) {
     return (
         <Container className='mt-5'>
-            <div className="wrapper" style={ props.style }>
+            <div className={ styles.wrapper } style={ props.style }>
                 { props.children }
             </div>
         </Container>

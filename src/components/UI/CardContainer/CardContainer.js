@@ -1,11 +1,11 @@
-import './CardContainer.css';
+import styles from './CardContainer.module.css';
 
 function CardContainer(props) {
 
     return (
         <div
             { ...props.dataAos }
-            className={ props.className + " card-container" }
+            className={ props.className + ` ${styles['card-container']}` }
             style={ { backgroundColor: props.color } }>
             { props.children }
         </div>

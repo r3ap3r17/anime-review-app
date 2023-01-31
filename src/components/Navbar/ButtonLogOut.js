@@ -1,8 +1,12 @@
-import "./ButtonLogOut.css";
+import styles from "./ButtonLogOut.module.css";
 
 function ButtonLogOut({ handleLogout }) {
     return (
-        <button type="button" id="logout-btn" onClick={ handleLogout } >
+        <button
+            id="logout-btn"
+            className={ styles['logout-btn'] }
+            type="button"
+            onClick={ handleLogout } >
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
         </button>
     );

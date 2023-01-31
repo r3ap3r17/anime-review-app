@@ -1,4 +1,4 @@
-#logout-btn {
+.logout-btn {
     cursor: pointer;
     color: #fff;
     border: 0;
@@ -9,6 +9,6 @@
     transition: all ease .25s;
 }
 
-#logout-btn:hover {
+.logout-btn:hover {
     opacity: .7;
 }

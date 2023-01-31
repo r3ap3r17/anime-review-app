@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import CardContainer from "../CardContainer/CardContainer";
 import img from './card-img.webp'; // Image is hardcoded for now
-import "./AnimeCard.css";
 import { Rating } from 'react-simple-star-rating';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import styles from "./AnimeCard.module.css";
 
 function AnimeCard({ anime }) {
     // Object that stores data-aos attributes
@@ -18,21 +18,22 @@ function AnimeCard({ anime }) {
     }, []);
 
     return (
+        // { styles[''] }
         <CardContainer
+            color="#F5F5FA"
             dataAos={ dataAos }
-            className="movie-card">
-            <div className="movie-card-header">
+            className={ styles['movie-card'] }>
+            <div className={ styles['movie-card-header'] }>
                 <img src={ img } alt="" />
             </div>
-            <div className="movie-card-body text-start">
-                <p className="movie-title mb-0 ms-1">
+            <div className={ `${styles['movie-card-body']} text-start` }>
+                <p className={ `${styles['movie-title']} mb-1 ms-1` }>
                     { anime.title }
                 </p>
-                <br />
-                <p className="movie-genre mb-0 ms-1">
+                <p className={ `${styles['movie-genre']} mb-1 ms-1` }>
                     { anime.genre }
                 </p>
-                <Rating initialValue={ anime.rating } size={ 30 } readonly allowFraction />
+                <Rating initialValue={ anime.rating } size={ 25 } readonly allowFraction />
             </div>
         </CardContainer>
     );
