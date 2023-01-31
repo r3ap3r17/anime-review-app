@@ -1,6 +1,6 @@
 .header-title,
 .header-description {
-    color: #fff;
+    color: var(--white);
 }
 
 .header-title {

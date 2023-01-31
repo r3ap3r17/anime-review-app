@@ -1,6 +1,6 @@
 .logout-btn {
     cursor: pointer;
-    color: #fff;
+    color: var(--white);
     border: 0;
     font-family: inherit;
     font-size: 1.5rem;

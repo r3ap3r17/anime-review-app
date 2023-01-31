@@ -1,5 +1,5 @@
 .movie-card {
-    background-color: #F4F4ED;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@
 }
 
 .movie-card-header {
-    background-color: #111;
+    background-color: var(--secondary);
     width: 100%;
     height: 270px;
 }
@@ -54,13 +54,13 @@
 }
 
 .movie-card-body .movie-title {
-    color: #111;
+    color: var(--secondary);
     font-size: 1.25rem;
     font-weight: 600;
 }
 
 .movie-card-body .movie-genre {
-    color: #111;
+    color: var(--secondary);
     font-size: .75rem;
     font-weight: 400;
 }

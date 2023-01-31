@@ -1,6 +1,6 @@
 /* NAVBAR MENU */
 a {
-    color: #fff !important;
+    color: var(--white) !important;
     opacity: .5;
     text-decoration: none;
 }

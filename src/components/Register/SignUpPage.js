@@ -113,7 +113,7 @@ function SignUpPage() {
                 <ErrorModal modalHandler={ modalHandler }>
                     Please provide valid data !
                 </ErrorModal> : null }
-            <CardContainer color="#fff" className={ `${styles['sign-form-card']} mx-auto` }>
+            <CardContainer color="var(--white)" className={ `${styles['sign-form-card']} mx-auto` }>
                 <h2 className={ `${styles['form-title']} mx-auto text-center mb-2` }>Create Account</h2>
                 <h2 className={ `${styles['form-description']} mx-auto text-center mb-4` }>Enter your credentials</h2>
                 <form id="sign-form" className={ styles['sign-form'] } onSubmit={ submitHandler }>

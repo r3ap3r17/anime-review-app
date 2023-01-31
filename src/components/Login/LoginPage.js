@@ -29,7 +29,7 @@ function LoginPage(props) {
                 <ErrorModal modalHandler={ modalHandler } >
                     Username or Password incorrect !
                 </ErrorModal> : null }
-            <CardContainer color="#fff" className={ `${styles['login-form-card']} mx-auto` }>
+            <CardContainer color="var(--white)" className={ `${styles['login-form-card']} mx-auto` }>
                 <h2 className={ `${styles['form-title']} mx-auto text-center mb-4` }>Login</h2>
                 <form id="login-form" className={ styles['login-form'] } onSubmit={ submitHandler }>
                     <input

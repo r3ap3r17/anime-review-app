@@ -15,7 +15,7 @@
 
 .nav-responsive ul {
     padding: 2rem 0 0 0;
-    background-color: #F4F4ED;
+    background-color: var(--white);
     overflow: hidden;
     width: 0;
     display: flex;
@@ -28,7 +28,7 @@
 
 .nav-responsive ul a {
     display: inline-block;
-    color: #111 !important;
+    color: var(--secondary) !important;
     padding-bottom: .25rem;
 }
 

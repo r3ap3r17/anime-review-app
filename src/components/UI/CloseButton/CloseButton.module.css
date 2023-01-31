@@ -29,7 +29,7 @@
 .close-span,
 .close-span::before,
 .close-span::after {
-    background-color: #138A36;
+    background-color: var(--primary);
 }
 
 .close-btn-box {
