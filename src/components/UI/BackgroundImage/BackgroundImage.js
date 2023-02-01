@@ -1,10 +1,12 @@
 import styles from "./BackgroundImage.module.css";
 
-function BackgroundImage({ imageLink }) {
+function BackgroundImage(props) {
+
     return (
         <div className={ styles.background }>
             <img
-                src={ imageLink }
+                className={ `${styles.image} ${props.active && styles.slide}` }
+                src={ props.imageLink }
                 alt="background" />
         </div>
     );

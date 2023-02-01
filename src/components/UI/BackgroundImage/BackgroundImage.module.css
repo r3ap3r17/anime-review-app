@@ -6,11 +6,19 @@
     height: 100%;
 }
 
-.background img {
+.image {
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(80%);
-    z-index: -1;
+    filter: brightness(70%);
+    z-index: -1111;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.slide.image {
+    opacity: 1;
+    transform: translateY(0);
 }

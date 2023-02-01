@@ -86,7 +86,7 @@ const ANIMES = [
 function HomePage({ handleLogout }) {
     return (
         <>
-            <HeaderSection animes={ ANIMES } handleLogout={ handleLogout } />
+            <HeaderSection handleLogout={ handleLogout } />
             <ContentWrapper style={ { marginBottom: "9rem" } }>
                 {
                     ANIMES.map((anime) =>

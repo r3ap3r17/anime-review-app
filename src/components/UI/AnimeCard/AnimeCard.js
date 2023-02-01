@@ -33,7 +33,12 @@ function AnimeCard({ anime }) {
                 <p className={ `${styles['movie-genre']} mb-1 ms-1` }>
                     { anime.genre }
                 </p>
-                <Rating initialValue={ anime.rating } size={ 25 } readonly allowFraction />
+                <Rating
+                    initialValue={ anime.rating }
+                    fillColor="#FF4B3D"
+                    size={ 25 }
+                    readonly
+                    allowFraction />
             </div>
         </CardContainer>
     );

@@ -136,7 +136,7 @@ function SignUpPage() {
                         onChange={ usernameInputHandler }
                     />
                     <ErrorMessage className={ usernameState.isValid === false ? 'invalid' : null }>
-                        Please provide a valid username
+                        Username must start with uppercase
                     </ErrorMessage>
 
                     <input
