@@ -7,9 +7,11 @@ import styles from "./NavBar.module.css"
 import NavResponsive from "./NavResponsive";
 
 
+
 function NavBar({ handleLogout }) {
     const [button, setButton] = useState(false);
     const [active, setActive] = useState(false);
+
     const activeHandler = () => setActive(!active);
 
     const showButton = () => {

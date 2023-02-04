@@ -1,12 +1,14 @@
+import HeaderSlide from "./HeaderSlide";
+import { useState } from "react";
+import { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import styles from "./HeaderSection.module.css";
 // import imageHellsing from "../../../assets/img/hellsing-ultimate.jpg";
 import imageHellsingAlternative from "../../../assets/img/hellsing-ultimate-alt.jpg";
 import imageDeathNote from "../../../assets/img/death-note.jpg";
 import imageAot from "../../../assets/img/aot.jpg";
-import HeaderSlide from "./HeaderSlide";
-import { useState } from "react";
-import { useEffect } from "react";
+import imageNaruto from "../../../assets/img/naruto.jpg";
+// import { useLayoutEffect } from "react";
 
 const ANIME_HEADER_DATA = [
     {
@@ -23,6 +25,11 @@ const ANIME_HEADER_DATA = [
         title: 'Attack On Titan',
         genre: 'Mystery, Action',
         image: imageAot
+    },
+    {
+        title: 'Naruto: Shippuuden',
+        genre: 'Adventure, Action',
+        image: imageNaruto
     }
 ];
 
@@ -33,36 +40,49 @@ const ANIME_HEADER_DATA = [
 // ADD INTERVAL ON IMAGE AND TEXT CHANGE
 
 function HeaderSection({ handleLogout }) {
-    // const [active, setActive] = useState(true); 
     const [active, setActive] = useState(false);
     const [currentContent, setCurrentContent] = useState(0);
 
-    // const handleImageTimer = (state) => {
-    //     setTimeout(() => {
-    //         setActive(state);
-    //     }, 2000);
+    // const randomNumberInRange = (min, max) => {
+    //     // 👇️ get number between min (inclusive) and max (inclusive)
+    //     return Math.floor(Math.random() * (max - min + 1)) + min;
     // }
 
-    const randomNumberInRange = (min, max) => {
-        // 👇️ get number between min (inclusive) and max (inclusive)
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+    // const fadeAnimationHandler = () => {
+    //     if (window.window.scrollY <= 350) {
+    //         setActive(true);
+    //     }
+    //     if (window.scrollY > 350) {
+    //         setActive(false);
+    //     }
+    // }
+
+    const handleSlider = () => {
+        setActive(false)
+        setTimeout(() => {
+            setCurrentContent(currentContent + 1)
+            if (currentContent === 3) setCurrentContent(0)
+        }, 1000)
+
     }
 
-    const fadeAnimationHandler = () => {
-        if (window.window.scrollY <= 350) {
-            setActive(true);
-        }
-        if (window.scrollY > 350) {
-            setActive(false);
-        }
-    }
+    // useLayoutEffect(() => {
+    //     fadeAnimationHandler();
+    // })
 
     useEffect(() => {
-        setCurrentContent(randomNumberInRange(0, 2));
-        fadeAnimationHandler();
+        // setCurrentContent(randomNumberInRange(0, ANIME_HEADER_DATA.length - 1));
+        const timer = setTimeout(() => {
+            setActive(true);
+        }, 50)
+        console.log(currentContent);
+
+        return () => {
+            clearTimeout(timer)
+        }
     }, [currentContent]);
 
-    window.addEventListener('scroll', fadeAnimationHandler);
+    // window.addEventListener('scroll', fadeAnimationHandler);
 
     // useEffect(() => {
     //     setActive(true);
@@ -81,7 +101,7 @@ function HeaderSection({ handleLogout }) {
                 currentContent={ currentContent }
                 active={ active }
                 content={ ANIME_HEADER_DATA }
-                handleLogout={ handleLogout } />
+                handleSlider={ handleSlider } />
         </Container>
     );
 }

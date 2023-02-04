@@ -7,7 +7,8 @@ function BackgroundImage(props) {
             <img
                 className={ `${styles.image} ${props.active && styles.slide}` }
                 src={ props.imageLink }
-                alt="background" />
+                alt="background"
+                loading="lazy" />
         </div>
     );
 }

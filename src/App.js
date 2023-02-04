@@ -4,6 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
 import SignUpPage from "./components/Register/SignUpPage";
 import HomePage from "./components/Pages/HomePage";
+import Layout from './components/Layout/Layout';
+import NewsPage from './components/Pages/NewsPage';
+import AboutPage from './components/Pages/AboutPage';
 
 function App() {
   const user = {
@@ -36,15 +39,27 @@ function App() {
     return token;
   }
 
+  // This login system is just a concept id doesnt really work as it should !!!
+
   return (
-    <Routes>
-      <Route path='/' element={
-        token ?
-          <HomePage handleLogout={ handleLogout } />
+    <Layout token={ token } handleLogout={ handleLogout }>
+      <Routes>
+        <Route path='/' element={
+          token ?
+            <HomePage exact />
+            :
+            <LoginPage validateUser={ validateUser } user={ user } /> } />
+        <Route path='/register' element={ !token ? <SignUpPage /> : null } />
+        <Route path='/news' element={ token ?
+          <NewsPage />
           :
-          <LoginPage validateUser={ validateUser } user={ user } /> } exact />
-      <Route path='/register' element={ !token ? <SignUpPage /> : null } />
-    </Routes>
+          <LoginPage validateUser={ validateUser } user={ user } /> } />
+        <Route path='/about' element={ token ?
+          <AboutPage />
+          :
+          <LoginPage validateUser={ validateUser } user={ user } /> } />
+      </Routes>
+    </Layout>
   );
 }
 

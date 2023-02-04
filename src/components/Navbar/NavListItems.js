@@ -1,33 +1,37 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./NavListItems.module.css";
 
 function NavListItems({ activeHandler }) {
-    const [activeLink, setActiveLink] = useState('animes');
+
+    const setLinkText = (link) => {
+        sessionStorage.setItem('link', link);
+    }
+
     return (
         <ul className="mx-auto">
             <li className={ `${styles['nav-item']} mx-3` }>
-                <a onClick={ (e) => {
-                    setActiveLink(e.target.text);
+                <Link onClick={ (e) => {
+                    setLinkText(e.target.text);
                     activeHandler();
                 } }
-                    className={ activeLink === 'animes' ? styles.active : null }
-                    href="#home">animes</a>
+                    className={ sessionStorage.getItem('link') === 'animes' ? styles.active : null }
+                    to='/'>animes</Link>
             </li>
             <li className={ `${styles['nav-item']} mx-3` }>
-                <a onClick={ (e) => {
-                    setActiveLink(e.target.text);
+                <Link onClick={ (e) => {
+                    setLinkText(e.target.text);
                     activeHandler();
                 } }
-                    className={ activeLink === 'news' ? styles.active : null }
-                    href="#about">news</a>
+                    className={ sessionStorage.getItem('link') === 'news' ? styles.active : null }
+                    to='/news'>news</Link>
             </li>
             <li className={ `${styles['nav-item']} mx-3` }>
-                <a onClick={ (e) => {
-                    setActiveLink(e.target.text);
+                <Link onClick={ (e) => {
+                    setLinkText(e.target.text);
                     activeHandler();
                 } }
-                    className={ activeLink === 'faqs' ? styles.active : null }
-                    href="#faq">faqs</a>
+                    className={ sessionStorage.getItem('link') === 'about' ? styles.active : null }
+                    to='/about'>about</Link>
             </li>
             {/* <li className="nav-item mx-3">
                 <a onClick={ () => {

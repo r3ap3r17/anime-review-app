@@ -15,7 +15,7 @@
     z-index: -1111;
     transform: translateY(-100%);
     opacity: 0;
-    transition: all 1s ease;
+    transition: all .85s ease;
 }
 
 .slide.image {
