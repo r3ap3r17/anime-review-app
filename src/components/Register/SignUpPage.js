@@ -2,8 +2,9 @@ import { useReducer, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ErrorModal from "../Modals/ErrorModal";
+import SuccessModal from "../Modals/SuccessModal";
 import CardContainer from "../UI/CardContainer/CardContainer";
-import ErrorMessage from "../UI/ErrorMessage/ErrorMessage";
+import InputControlGroup from "../UI/InputControlGroup/InputControlGroup";
 import styles from "./SignUpPage.module.css";
 
 // First name must contain 2 strings each starting with Uppercase
@@ -65,7 +66,8 @@ function SignUpPage() {
     const [passwordState, dispatchPassword] = useReducer(passwordReducer, { value: '', isValid: null });
     const [confirmPasswordState, dispatchConfirmPassword] = useReducer(confirmPasswordReducer, { value: '', isValid: null });
 
-    const [modal, setModal] = useState(false);
+    const [errorModal, setErrorModal] = useState(null);
+    const [successModal, setSuccessModal] = useState(null);
     const [sign, setSign] = useState({});
 
     const nameInputHandler = (event) => {
@@ -84,8 +86,12 @@ function SignUpPage() {
         dispatchConfirmPassword({ type: "USER_INPUT", val: event.target.value, pass: passwordState.value })
     }
 
-    const modalHandler = () => {
-        setModal(false);
+    const errorModalHandler = () => {
+        setErrorModal(false);
+    }
+
+    const successModalHandler = () => {
+        setSuccessModal(false);
     }
 
 
@@ -94,7 +100,7 @@ function SignUpPage() {
 
 
         if (fullnameState.isValid && usernameState.isValid && passwordState.isValid && confirmPasswordState.isValid) {
-            setModal(false);
+            setSuccessModal(true);
             setSign({
                 name: fullnameState.value,
                 username: usernameState.value,
@@ -103,61 +109,68 @@ function SignUpPage() {
             });
             console.log(sign);
         } else {
-            setModal(true);
+            setErrorModal(true);
         }
     }
 
     return (
         <Container>
-            { modal ?
-                <ErrorModal modalHandler={ modalHandler }>
+            {
+                errorModal &&
+                <ErrorModal modalHandler={ errorModalHandler }>
                     Please provide valid data !
-                </ErrorModal> : null }
+                </ErrorModal>
+            }
+            {
+                successModal &&
+                <SuccessModal modalHandler={ successModalHandler }>
+                    Account created !
+                </SuccessModal>
+            }
             <CardContainer color="var(--white)" className={ `${styles['sign-form-card']} mx-auto` }>
                 <h2 className={ `${styles['form-title']} mx-auto text-center mb-2` }>Create Account</h2>
                 <h2 className={ `${styles['form-description']} mx-auto text-center mb-4` }>Enter your credentials</h2>
                 <form id="sign-form" className={ styles['sign-form'] } onSubmit={ submitHandler }>
-                    <input
+                    <InputControlGroup
+                        className={ styles.input }
                         name="full-name"
                         type="text"
                         placeholder="Full Name"
                         onChange={ nameInputHandler }
                         value={ fullnameState.value }
+                        isValid={ fullnameState.isValid }
+                        errorMessage="Please provide a valid name"
                     />
-                    <ErrorMessage className={ fullnameState.isValid === false ? 'invalid' : null }>
-                        Please provide a valid name
-                    </ErrorMessage>
 
-
-                    <input
+                    <InputControlGroup
                         name="username"
                         type="text"
                         placeholder="Username"
+                        className={ styles.input }
                         onChange={ usernameInputHandler }
+                        isValid={ usernameState.isValid }
+                        errorMessage="Username must start with uppercase"
                     />
-                    <ErrorMessage className={ usernameState.isValid === false ? 'invalid' : null }>
-                        Username must start with uppercase
-                    </ErrorMessage>
 
-                    <input
+                    <InputControlGroup
                         name="password"
                         type="password"
                         placeholder="Password"
+                        className={ styles.input }
                         onChange={ passInputHandler }
+                        isValid={ passwordState.isValid }
+                        errorMessage="Please provide a valid password"
                     />
-                    <ErrorMessage className={ passwordState.isValid === false ? 'invalid' : null }>
-                        Please provide a valid password
-                    </ErrorMessage>
 
-                    <input
+                    <InputControlGroup
                         name="confirm-password"
                         type="password"
                         placeholder="Confirm Password"
+                        className={ styles.input }
                         onChange={ confirmPassInputHandler }
+                        isValid={ confirmPasswordState.isValid }
+                        errorMessage="Password must match"
                     />
-                    <ErrorMessage className={ confirmPasswordState.isValid === false ? 'invalid' : null }>
-                        Password must match
-                    </ErrorMessage>
 
                     <button type="submit">SUBMIT</button>
                     <p className="text-center p-0 mb-0">

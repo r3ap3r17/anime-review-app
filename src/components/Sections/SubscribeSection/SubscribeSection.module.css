@@ -1,0 +1,30 @@
+.title,
+.text {
+    color: var(--white);
+}
+
+.text {
+    opacity: .5;
+}
+
+.input {
+    padding: .35rem 1rem;
+    border-radius: 4px;
+    border: none;
+    outline: 0;
+}
+
+.button {
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: .35rem 1rem;
+    font-size: 1.25rem;
+    transition: all .35s ease;
+}
+
+.button:hover {
+    opacity: .7;
+}

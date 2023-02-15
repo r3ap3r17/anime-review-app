@@ -17,7 +17,7 @@
 }
 
 
-.sign-form>input,
+.sign-form>.input,
 .sign-form>button {
     width: 100%;
     height: 55px;
@@ -35,7 +35,7 @@
     opacity: .5;
 }
 
-.sign-form>input {
+.sign-form>.input {
     outline: 0;
     border: 2px solid #A42118;
     font-family: inherit;
@@ -44,7 +44,7 @@
     color: #11274c;
 }
 
-.sign-form>input::placeholder {
+.sign-form>.input::placeholder {
     color: var(--secondary);
     font-weight: 500;
     opacity: .75;

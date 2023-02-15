@@ -1,5 +1,6 @@
 import ContentWrapper from "../Sections/ContentWrapper/ContentWrapper";
 import HeaderSection from "../Sections/HeaderSection/HeaderSection";
+import SubscribeSection from "../Sections/SubscribeSection/SubscribeSection";
 import AnimeCard from "../UI/AnimeCard/AnimeCard";
 
 const ANIMES = [
@@ -87,6 +88,7 @@ function HomePage({ handleLogout }) {
     return (
         <>
             <HeaderSection />
+            <SubscribeSection />
             <ContentWrapper style={ { marginBottom: "9rem" } }>
                 {
                     ANIMES.map((anime) =>

@@ -1,0 +1,54 @@
+.success-modal p {
+    margin: 0;
+}
+
+.success-modal {
+    width: 90%;
+    background-color: #fff !important;
+    color: #0c0c0F;
+    z-index: 101;
+}
+
+@media (width >=768px) {
+    .success-modal {
+        width: 500px;
+    }
+}
+
+.success-modal-header {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #2FB390;
+    padding: 1rem 2rem;
+}
+
+.success-modal-body {
+    font-size: 1.5rem;
+    padding: 2rem 2rem;
+}
+
+.success-modal-footer {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.success-modal-footer>button {
+    cursor: pointer;
+    width: 100px;
+    height: 45px;
+    padding: 8px;
+    background-color: #2FB390;
+    border: 2px solid #2FB390;
+    color: #fff;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 22px;
+    transition: all ease .25s;
+}
+
+.success-modal-footer>button:hover {
+    opacity: .8;
+}

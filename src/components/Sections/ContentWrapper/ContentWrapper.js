@@ -3,7 +3,7 @@ import styles from './ContentWrapper.module.css';
 
 function ContentWrapper(props) {
     return (
-        <Container className='mt-5'>
+        <Container>
             <div className={ styles.wrapper } style={ props.style }>
                 { props.children }
             </div>
