@@ -1,8 +1,9 @@
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import styles from "./InputControlGroup.module.css";
 
 function InputControlGroup(props) {
     return (
-        <>
+        <div className={ styles.group }>
             <input
                 name={ props.name }
                 type={ props.type }
@@ -13,7 +14,7 @@ function InputControlGroup(props) {
             <ErrorMessage className={ props.isValid === false ? 'invalid' : null }>
                 { props.errorMessage }
             </ErrorMessage>
-        </>
+        </div>
     );
 }
 

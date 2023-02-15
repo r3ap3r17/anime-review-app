@@ -1,8 +1,7 @@
 .error {
     margin-bottom: .5rem;
-    margin-left: 1rem;
     font-size: 14px;
-    color: red !important;
+    color: var(--primary);
     cursor: default;
     opacity: 0;
 }
